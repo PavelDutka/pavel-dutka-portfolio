@@ -8,25 +8,25 @@ const timeline = [
     year: "2015",
     title: "Game Development Journey",
     description: "Started exploring game development as a passion project",
-    icon: <Monitor className="text-neon-cyan" size={24} />
+    icon: <Monitor className="text-neon-amber" size={24} />
   },
   {
     year: "2018",
     title: "3D & Archviz Focus",
     description: "Transitioned into 3D modeling and architectural visualization at Polygoniq",
-    icon: <Box className="text-neon-purple" size={24} />
+    icon: <Box className="text-neon-gold" size={24} />
   },
   {
     year: "2020",
     title: "Web Development",
     description: "Expanded skillset to include responsive web application development",
-    icon: <Monitor className="text-neon-cyan" size={24} />
+    icon: <Monitor className="text-neon-amber" size={24} />
   },
   {
     year: "2022",
     title: "Automation & DevOps",
     description: "Discovered cybersecurity, IoT, networking, and automation workflows",
-    icon: <Workflow className="text-neon-purple" size={24} />
+    icon: <Workflow className="text-neon-gold" size={24} />
   }
 ];
 
@@ -34,7 +34,7 @@ const About: React.FC = () => {
   return (
     <section className="py-24 relative overflow-hidden" id="about">
       <div 
-        className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-neon-purple/5 to-transparent pointer-events-none"
+        className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-neon-gold/5 to-transparent pointer-events-none"
         style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 60%)' }}
       ></div>
       
@@ -64,7 +64,7 @@ const About: React.FC = () => {
               Later, I discovered my interest in cybersecurity, IoT, networking, and automation, which has become my main focus. This diverse background allows me to approach problems from multiple perspectives.
             </p>
             
-            <blockquote className="border-l-4 border-neon-purple pl-4 py-2 mt-6 glass-card">
+            <blockquote className="border-l-4 border-neon-gold pl-4 py-2 mt-6 glass-card">
               <p className="italic text-foreground/90">
                 "Technology and creativity go hand in hand—why choose just one?"
               </p>
@@ -72,7 +72,7 @@ const About: React.FC = () => {
           </motion.div>
           
           <motion.div 
-            className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-0.5 before:bg-gradient-to-b before:from-neon-purple before:via-neon-cyan before:to-neon-purple"
+            className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-0.5 before:bg-gradient-to-b before:from-neon-gold before:via-neon-amber before:to-neon-gold"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -81,11 +81,11 @@ const About: React.FC = () => {
             <div className="space-y-12">
               {timeline.map((item, index) => (
                 <div key={index} className="relative">
-                  <div className="absolute -left-12 flex items-center justify-center w-8 h-8 rounded-full bg-background border border-neon-purple/30 glass-card">
+                  <div className="absolute -left-12 flex items-center justify-center w-8 h-8 rounded-full bg-background border border-neon-gold/30 glass-card">
                     {item.icon}
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-sm font-medium text-neon-cyan mb-1">{item.year}</span>
+                    <span className="text-sm font-medium text-neon-amber mb-1">{item.year}</span>
                     <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
                     <p className="text-sm text-foreground/70">{item.description}</p>
                   </div>

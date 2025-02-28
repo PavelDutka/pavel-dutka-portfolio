@@ -40,7 +40,12 @@ const Navbar: React.FC = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <NavLink to="/" className="text-xl font-display font-bold text-white flex items-center">
+          <NavLink to="/" className="font-display font-bold text-white flex items-center">
+            <img 
+              src="/lovable-uploads/f18fff16-0c6a-4446-a75f-279cfb7b7944.png"
+              alt="PD Logo" 
+              className="h-10 mr-2" 
+            />
             <span className="text-gradient">Pavel Dutka</span>
           </NavLink>
 
@@ -53,11 +58,11 @@ const Navbar: React.FC = () => {
                 className={({ isActive }) => 
                   `font-medium transition-all duration-300 relative py-1
                   ${isActive 
-                    ? 'text-neon-purple text-glow' 
+                    ? 'text-neon-gold text-glow' 
                     : 'text-foreground/80 hover:text-foreground'
                   }
                   after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 
-                  after:bg-neon-purple after:transition-transform after:duration-300
+                  after:bg-neon-gold after:transition-transform after:duration-300
                   hover:after:scale-x-100`
                 }
               >
@@ -93,7 +98,7 @@ const Navbar: React.FC = () => {
               onClick={() => setIsOpen(false)}
               className={({ isActive }) => 
                 `text-xl font-medium transition-all duration-300
-                ${isActive ? 'text-neon-purple text-glow' : 'text-foreground/80'}`
+                ${isActive ? 'text-neon-gold text-glow' : 'text-foreground/80'}`
               }
             >
               {item.name}

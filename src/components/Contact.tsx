@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
   return (
     <section className="py-24 relative overflow-hidden" id="contact">
       <div 
-        className="absolute bottom-0 right-0 w-full h-64 bg-gradient-to-t from-neon-cyan/5 to-transparent pointer-events-none"
+        className="absolute bottom-0 right-0 w-full h-64 bg-gradient-to-t from-neon-amber/5 to-transparent pointer-events-none"
         style={{ clipPath: 'polygon(0 100%, 100% 60%, 100% 100%, 0 100%)' }}
       ></div>
       
@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold flex items-center">
-              <MessageSquare className="mr-3 text-neon-purple" size={24} />
+              <MessageSquare className="mr-3 text-neon-gold" size={24} />
               Get in Touch
             </h3>
             
@@ -68,16 +68,16 @@ const Contact: React.FC = () => {
             </p>
             
             <div className="flex items-center space-x-3 text-foreground/80">
-              <Mail className="text-neon-cyan" size={20} />
+              <Mail className="text-neon-amber" size={20} />
               <a 
                 href="mailto:contact@paveldutka.com" 
-                className="hover:text-neon-cyan transition-colors duration-300"
+                className="hover:text-neon-amber transition-colors duration-300"
               >
                 contact@paveldutka.com
               </a>
             </div>
             
-            <blockquote className="border-l-4 border-neon-cyan pl-4 py-2 mt-6 glass-card">
+            <blockquote className="border-l-4 border-neon-amber pl-4 py-2 mt-6 glass-card">
               <p className="italic text-foreground/90">
                 "Want to collaborate? Let's talk!"
               </p>
@@ -100,7 +100,7 @@ const Contact: React.FC = () => {
                 name="name"
                 value={formState.name}
                 onChange={handleChange}
-                className="w-full p-3 rounded-lg bg-secondary/50 border border-border focus:border-neon-purple focus:ring-1 focus:ring-neon-purple outline-none transition-all duration-300"
+                className="w-full p-3 rounded-lg bg-secondary/50 border border-border focus:border-neon-gold focus:ring-1 focus:ring-neon-gold outline-none transition-all duration-300"
                 required
               />
             </div>
@@ -113,7 +113,7 @@ const Contact: React.FC = () => {
                 name="email"
                 value={formState.email}
                 onChange={handleChange}
-                className="w-full p-3 rounded-lg bg-secondary/50 border border-border focus:border-neon-purple focus:ring-1 focus:ring-neon-purple outline-none transition-all duration-300"
+                className="w-full p-3 rounded-lg bg-secondary/50 border border-border focus:border-neon-gold focus:ring-1 focus:ring-neon-gold outline-none transition-all duration-300"
                 required
               />
             </div>
@@ -126,14 +126,14 @@ const Contact: React.FC = () => {
                 value={formState.message}
                 onChange={handleChange}
                 rows={5}
-                className="w-full p-3 rounded-lg bg-secondary/50 border border-border focus:border-neon-purple focus:ring-1 focus:ring-neon-purple outline-none transition-all duration-300 resize-none"
+                className="w-full p-3 rounded-lg bg-secondary/50 border border-border focus:border-neon-gold focus:ring-1 focus:ring-neon-gold outline-none transition-all duration-300 resize-none"
                 required
               ></textarea>
             </div>
             
             <button
               type="submit"
-              className="w-full py-3 rounded-lg bg-neon-purple text-white font-medium button-glow flex items-center justify-center"
+              className="w-full py-3 rounded-lg bg-neon-gold text-black font-medium button-glow flex items-center justify-center"
             >
               Send Message
               <Send size={18} className="ml-2" />

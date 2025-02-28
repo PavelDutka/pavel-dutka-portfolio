@@ -68,8 +68,9 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				neon: {
-					purple: '#8B5CF6',
-					cyan: '#22D3EE',
+					gold: '#FFD700',     // Bright gold
+					amber: '#FFC107',    // Amber gold
+					bronze: '#CD7F32',   // Bronze accent for depth
 				},
 			},
 			borderRadius: {
