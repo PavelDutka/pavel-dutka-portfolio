@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CircuitBoard, Monitor, Cube, Workflow } from 'lucide-react';
+import { CircuitBoard, Monitor, Box, Workflow } from 'lucide-react';
 
 const timeline = [
   {
@@ -14,7 +14,7 @@ const timeline = [
     year: "2018",
     title: "3D & Archviz Focus",
     description: "Transitioned into 3D modeling and architectural visualization at Polygoniq",
-    icon: <Cube className="text-neon-purple" size={24} />
+    icon: <Box className="text-neon-purple" size={24} />
   },
   {
     year: "2020",
