@@ -42,11 +42,10 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           <NavLink to="/" className="font-display font-bold text-white flex items-center">
             <img 
-              src="/lovable-uploads/f18fff16-0c6a-4446-a75f-279cfb7b7944.png"
+              src="/images/logo_gold.svg"
               alt="PD Logo" 
               className="h-10 mr-2" 
             />
-            <span className="text-gradient">Pavel Dutka</span>
           </NavLink>
 
           {/* Desktop Navigation */}

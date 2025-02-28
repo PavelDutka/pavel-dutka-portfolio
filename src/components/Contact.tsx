@@ -70,10 +70,10 @@ const Contact: React.FC = () => {
             <div className="flex items-center space-x-3 text-foreground/80">
               <Mail className="text-neon-amber" size={20} />
               <a 
-                href="mailto:contact@paveldutka.com" 
+                href="mailto:pavel@paveldutka.com" 
                 className="hover:text-neon-amber transition-colors duration-300"
               >
-                contact@paveldutka.com
+                pavel@paveldutka.com
               </a>
             </div>
             
