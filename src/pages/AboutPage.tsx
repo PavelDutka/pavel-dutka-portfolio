@@ -39,7 +39,7 @@ const AboutPage: React.FC = () => {
       
       <div className="container mx-auto px-6 py-16">
         <motion.div 
-          className="max-w-3xl mx-auto text-center mb-16"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -47,7 +47,7 @@ const AboutPage: React.FC = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-gradient">About Me</span>
           </h1>
-          <p className="text-foreground/80">
+          <p className="text-foreground/80 max-w-3xl mx-auto">
             Learn more about my journey, skills, and approach to creating digital solutions.
           </p>
         </motion.div>

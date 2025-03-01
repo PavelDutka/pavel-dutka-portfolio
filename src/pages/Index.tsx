@@ -5,6 +5,7 @@ import Hero from '../components/Hero';
 import Portfolio from '../components/Portfolio';
 import About from '../components/About';
 import Contact from '../components/Contact';
+import WhatIDo from '../components/WhatIDo';
 
 const Index: React.FC = () => {
   useEffect(() => {
@@ -15,6 +16,8 @@ const Index: React.FC = () => {
     <div className="min-h-screen relative">
       <AnimatedBackground />
       <Hero />
+      <WhatIDo />
+      <div className="section-divider" />
       <Portfolio />
       <div className="section-divider" />
       <About />

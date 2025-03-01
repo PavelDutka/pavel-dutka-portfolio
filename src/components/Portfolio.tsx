@@ -9,7 +9,6 @@ const projects = [
     description: "High-quality architectural visualization of a contemporary house with before/after comparison.",
     image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=80",
     tags: ["3D Visualization", "Architecture", "Blender"],
-    link: "/portfolio"
   },
   {
     id: 2,
@@ -17,7 +16,6 @@ const projects = [
     description: "Clean, professional website design for a financial advisory firm with interactive UI elements.",
     image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=2000&q=80",
     tags: ["Web Design", "UI/UX", "React"],
-    link: "/portfolio"
   },
   {
     id: 3,
@@ -25,7 +23,6 @@ const projects = [
     description: "Complex infrastructure automation implementation with visual workflow diagrams and monitoring.",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=80",
     tags: ["Automation", "DevOps", "Infrastructure"],
-    link: "/portfolio"
   }
 ];
 
@@ -46,11 +43,11 @@ const Portfolio: React.FC = () => {
           {projects.map((project) => (
             <ProjectCard
               key={project.id}
+              id={project.id}
               title={project.title}
               description={project.description}
               image={project.image}
               tags={project.tags}
-              link={project.link}
             />
           ))}
         </div>

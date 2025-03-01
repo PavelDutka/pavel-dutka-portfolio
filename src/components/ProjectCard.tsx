@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface ProjectCardProps {
   title: string;
@@ -9,6 +10,7 @@ interface ProjectCardProps {
   image: string;
   tags: string[];
   link?: string;
+  id?: number;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -16,9 +18,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   image,
   tags,
-  link
+  link,
+  id
 }) => {
   const [isHovered, setIsHovered] = useState(false);
+  
+  // Determine the link - use provided link or generate project detail page link
+  const projectLink = link || (id ? `/project/${id}` : undefined);
 
   return (
     <motion.div
@@ -60,15 +66,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {description}
         </p>
         
-        {link && (
-          <a 
-            href={link} 
-            target="_blank" 
-            rel="noopener noreferrer" 
+        {projectLink && (
+          <Link
+            to={projectLink}
             className="inline-flex items-center mt-3 text-neon-cyan font-medium text-sm group-hover:underline transition-all duration-300 opacity-0 group-hover:opacity-100"
           >
             View Project <ArrowUpRight size={14} className="ml-1" />
-          </a>
+          </Link>
         )}
       </div>
     </motion.div>
