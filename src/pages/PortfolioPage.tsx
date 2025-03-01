@@ -1,9 +1,10 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import AnimatedBackground from '../components/AnimatedBackground';
 import ProjectCard from '../components/ProjectCard';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Link } from 'react-router-dom';
 
 const projects = [
   {
@@ -57,9 +58,15 @@ const projects = [
 ];
 
 const PortfolioPage: React.FC = () => {
+  const [activeTab, setActiveTab] = useState("all");
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleTabChange = (value: string) => {
+    setActiveTab(value);
+  };
 
   return (
     <div className="min-h-screen relative pt-24">
@@ -80,7 +87,7 @@ const PortfolioPage: React.FC = () => {
           </p>
         </motion.div>
 
-        <Tabs defaultValue="all" className="w-full">
+        <Tabs defaultValue="all" className="w-full" onValueChange={handleTabChange}>
           <TabsList className="flex justify-center mb-12 bg-transparent">
             <TabsTrigger 
               value="all" 
@@ -110,49 +117,57 @@ const PortfolioPage: React.FC = () => {
           
           <TabsContent value="all" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
-              <ProjectCard
-                key={project.id}
-                title={project.title}
-                description={project.description}
-                image={project.image}
-                tags={project.tags}
-              />
+              <Link to={`/project/${project.id}`} key={project.id} className="block">
+                <ProjectCard
+                  title={project.title}
+                  description={project.description}
+                  image={project.image}
+                  tags={project.tags}
+                  id={project.id}
+                />
+              </Link>
             ))}
           </TabsContent>
           
           <TabsContent value="3d" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.filter(p => p.category === "3d").map((project) => (
-              <ProjectCard
-                key={project.id}
-                title={project.title}
-                description={project.description}
-                image={project.image}
-                tags={project.tags}
-              />
+              <Link to={`/project/${project.id}`} key={project.id} className="block">
+                <ProjectCard
+                  title={project.title}
+                  description={project.description}
+                  image={project.image}
+                  tags={project.tags}
+                  id={project.id}
+                />
+              </Link>
             ))}
           </TabsContent>
           
           <TabsContent value="web" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.filter(p => p.category === "web").map((project) => (
-              <ProjectCard
-                key={project.id}
-                title={project.title}
-                description={project.description}
-                image={project.image}
-                tags={project.tags}
-              />
+              <Link to={`/project/${project.id}`} key={project.id} className="block">
+                <ProjectCard
+                  title={project.title}
+                  description={project.description}
+                  image={project.image}
+                  tags={project.tags}
+                  id={project.id}
+                />
+              </Link>
             ))}
           </TabsContent>
           
           <TabsContent value="automation" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.filter(p => p.category === "automation").map((project) => (
-              <ProjectCard
-                key={project.id}
-                title={project.title}
-                description={project.description}
-                image={project.image}
-                tags={project.tags}
-              />
+              <Link to={`/project/${project.id}`} key={project.id} className="block">
+                <ProjectCard
+                  title={project.title}
+                  description={project.description}
+                  image={project.image}
+                  tags={project.tags}
+                  id={project.id}
+                />
+              </Link>
             ))}
           </TabsContent>
         </Tabs>

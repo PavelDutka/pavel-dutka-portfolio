@@ -39,11 +39,40 @@ const CustomCursor: React.FC = () => {
     window.addEventListener('mouseleave', handleMouseLeave);
     window.addEventListener('mouseover', handleLinkHover);
     
+    // Apply cursor: none to body
+    document.body.style.cursor = 'none';
+    
+    // Apply cursor: none to all a and button elements
+    const applyNoCursor = () => {
+      const elements = document.querySelectorAll('a, button, [role="button"], input, select, textarea');
+      elements.forEach((el) => {
+        (el as HTMLElement).style.cursor = 'none';
+      });
+    };
+    
+    // Run initially
+    applyNoCursor();
+    
+    // Set up a MutationObserver to watch for changes to the DOM
+    const observer = new MutationObserver(applyNoCursor);
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+    
     return () => {
       window.removeEventListener('mousemove', updateCursorPosition);
       window.removeEventListener('mouseenter', handleMouseEnter);
       window.removeEventListener('mouseleave', handleMouseLeave);
       window.removeEventListener('mouseover', handleLinkHover);
+      
+      // Restore default cursor on cleanup
+      document.body.style.cursor = '';
+      document.querySelectorAll('a, button, [role="button"], input, select, textarea').forEach((el) => {
+        (el as HTMLElement).style.cursor = '';
+      });
+      
+      observer.disconnect();
     };
   }, [isVisible]);
 
@@ -58,6 +87,11 @@ const CustomCursor: React.FC = () => {
 
   return (
     <>
+      <style jsx global>{`
+        * {
+          cursor: none !important;
+        }
+      `}</style>
       <div 
         className={`custom-cursor cursor-dot ${isVisible ? 'opacity-100' : 'opacity-0'}`}
         style={{
