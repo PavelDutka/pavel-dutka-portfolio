@@ -8,7 +8,10 @@ const CustomCursor: React.FC = () => {
 
   useEffect(() => {
     const updateCursorPosition = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      // Use requestAnimationFrame for smoother cursor movement
+      requestAnimationFrame(() => {
+        setPosition({ x: e.clientX, y: e.clientY });
+      });
       
       if (!isVisible) {
         setIsVisible(true);
@@ -46,9 +49,9 @@ const CustomCursor: React.FC = () => {
     // Apply cursor: none to body
     document.body.style.cursor = 'none';
     
-    // Apply cursor: none to all a and button elements
+    // Apply cursor: none to all interactive elements
     const applyNoCursor = () => {
-      const elements = document.querySelectorAll('a, button, [role="button"], input, select, textarea');
+      const elements = document.querySelectorAll('a, button, [role="button"], input, select, textarea, [data-radix-collection-item]');
       elements.forEach((el) => {
         (el as HTMLElement).style.cursor = 'none';
       });
@@ -72,7 +75,7 @@ const CustomCursor: React.FC = () => {
       
       // Restore default cursor on cleanup
       document.body.style.cursor = '';
-      document.querySelectorAll('a, button, [role="button"], input, select, textarea').forEach((el) => {
+      document.querySelectorAll('a, button, [role="button"], input, select, textarea, [data-radix-collection-item]').forEach((el) => {
         (el as HTMLElement).style.cursor = '';
       });
       
@@ -91,7 +94,6 @@ const CustomCursor: React.FC = () => {
 
   return (
     <>
-      {/* Replace the problematic style jsx with a standard style element */}
       <style>
         {`
           * {
@@ -112,6 +114,8 @@ const CustomCursor: React.FC = () => {
             background-color: #e4c76a;
             border-radius: 50%;
             box-shadow: 0 0 10px rgba(228, 199, 106, 0.8);
+            transform: translate3d(0, 0, 0);
+            transition: transform 0.1s ease-out;
           }
           
           .cursor-outline {
@@ -119,11 +123,12 @@ const CustomCursor: React.FC = () => {
             height: 40px;
             border: 2px solid rgba(228, 199, 106, 0.5);
             border-radius: 50%;
-            transition: all 0.2s ease-in-out;
+            transform: translate3d(0, 0, 0);
+            transition: all 0.2s ease-out;
           }
           
           .cursor-hover {
-            transform: scale(1.5) !important;
+            transform: translate3d(0, 0, 0) scale(1.5) !important;
             background-color: rgba(228, 199, 106, 0.1);
             border-color: rgba(228, 199, 106, 0.8);
           }
@@ -132,13 +137,13 @@ const CustomCursor: React.FC = () => {
       <div 
         className={`custom-cursor cursor-dot ${isVisible ? 'opacity-100' : 'opacity-0'}`}
         style={{
-          transform: `translate(${position.x}px, ${position.y}px)`,
+          transform: `translate3d(${position.x}px, ${position.y}px, 0)`,
         }}
       />
       <div 
         className={`custom-cursor cursor-outline ${isVisible ? 'opacity-100' : 'opacity-0'} ${isHovering ? 'cursor-hover' : ''}`}
         style={{
-          transform: `translate(${position.x - 20}px, ${position.y - 20}px)`,
+          transform: `translate3d(${position.x - 20}px, ${position.y - 20}px, 0)`,
         }}
       />
     </>
