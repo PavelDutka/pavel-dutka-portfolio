@@ -87,11 +87,14 @@ const CustomCursor: React.FC = () => {
 
   return (
     <>
-      <style jsx global>{`
-        * {
-          cursor: none !important;
-        }
-      `}</style>
+      {/* Replace the problematic style jsx with a standard style element */}
+      <style>
+        {`
+          * {
+            cursor: none !important;
+          }
+        `}
+      </style>
       <div 
         className={`custom-cursor cursor-dot ${isVisible ? 'opacity-100' : 'opacity-0'}`}
         style={{
