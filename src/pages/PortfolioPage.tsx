@@ -87,29 +87,29 @@ const PortfolioPage: React.FC = () => {
           </p>
         </motion.div>
 
-        <Tabs defaultValue="all" className="w-full" onValueChange={handleTabChange}>
+        <Tabs value={activeTab} defaultValue="all" className="w-full" onValueChange={handleTabChange}>
           <TabsList className="flex justify-center mb-12 bg-transparent">
             <TabsTrigger 
               value="all" 
-              className="px-6 py-2 data-[state=active]:bg-neon-purple/20 data-[state=active]:text-neon-purple rounded-md"
+              className="px-6 py-2 data-[state=active]:bg-neon-purple/20 data-[state=active]:text-neon-purple rounded-md cursor-pointer"
             >
               All Projects
             </TabsTrigger>
             <TabsTrigger 
               value="3d" 
-              className="px-6 py-2 data-[state=active]:bg-neon-purple/20 data-[state=active]:text-neon-purple rounded-md"
+              className="px-6 py-2 data-[state=active]:bg-neon-purple/20 data-[state=active]:text-neon-purple rounded-md cursor-pointer"
             >
               3D Visualization
             </TabsTrigger>
             <TabsTrigger 
               value="web" 
-              className="px-6 py-2 data-[state=active]:bg-neon-purple/20 data-[state=active]:text-neon-purple rounded-md"
+              className="px-6 py-2 data-[state=active]:bg-neon-purple/20 data-[state=active]:text-neon-purple rounded-md cursor-pointer"
             >
               Web Development
             </TabsTrigger>
             <TabsTrigger 
               value="automation" 
-              className="px-6 py-2 data-[state=active]:bg-neon-purple/20 data-[state=active]:text-neon-purple rounded-md"
+              className="px-6 py-2 data-[state=active]:bg-neon-purple/20 data-[state=active]:text-neon-purple rounded-md cursor-pointer"
             >
               Automation
             </TabsTrigger>
@@ -117,7 +117,7 @@ const PortfolioPage: React.FC = () => {
           
           <TabsContent value="all" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
-              <Link to={`/project/${project.id}`} key={project.id} className="block">
+              <Link to={`/project/${project.id}`} key={project.id} className="block cursor-pointer">
                 <ProjectCard
                   title={project.title}
                   description={project.description}
@@ -131,7 +131,7 @@ const PortfolioPage: React.FC = () => {
           
           <TabsContent value="3d" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.filter(p => p.category === "3d").map((project) => (
-              <Link to={`/project/${project.id}`} key={project.id} className="block">
+              <Link to={`/project/${project.id}`} key={project.id} className="block cursor-pointer">
                 <ProjectCard
                   title={project.title}
                   description={project.description}
@@ -145,7 +145,7 @@ const PortfolioPage: React.FC = () => {
           
           <TabsContent value="web" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.filter(p => p.category === "web").map((project) => (
-              <Link to={`/project/${project.id}`} key={project.id} className="block">
+              <Link to={`/project/${project.id}`} key={project.id} className="block cursor-pointer">
                 <ProjectCard
                   title={project.title}
                   description={project.description}
@@ -159,7 +159,7 @@ const PortfolioPage: React.FC = () => {
           
           <TabsContent value="automation" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.filter(p => p.category === "automation").map((project) => (
-              <Link to={`/project/${project.id}`} key={project.id} className="block">
+              <Link to={`/project/${project.id}`} key={project.id} className="block cursor-pointer">
                 <ProjectCard
                   title={project.title}
                   description={project.description}

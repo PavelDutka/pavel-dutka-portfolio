@@ -29,7 +29,11 @@ const CustomCursor: React.FC = () => {
         target.tagName.toLowerCase() === 'a' || 
         target.tagName.toLowerCase() === 'button' ||
         target.closest('a') || 
-        target.closest('button');
+        target.closest('button') ||
+        target.getAttribute('role') === 'button' ||
+        target.classList.contains('cursor-pointer') ||
+        // Also check for TabsTrigger components
+        target.closest('[data-radix-collection-item]');
       
       setIsHovering(!!isLink);
     };
@@ -92,6 +96,36 @@ const CustomCursor: React.FC = () => {
         {`
           * {
             cursor: none !important;
+          }
+          
+          .custom-cursor {
+            pointer-events: none;
+            position: fixed;
+            z-index: 9999;
+            transition: opacity 0.15s ease-in-out;
+            will-change: transform;
+          }
+          
+          .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #e4c76a;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(228, 199, 106, 0.8);
+          }
+          
+          .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 2px solid rgba(228, 199, 106, 0.5);
+            border-radius: 50%;
+            transition: all 0.2s ease-in-out;
+          }
+          
+          .cursor-hover {
+            transform: scale(1.5) !important;
+            background-color: rgba(228, 199, 106, 0.1);
+            border-color: rgba(228, 199, 106, 0.8);
           }
         `}
       </style>

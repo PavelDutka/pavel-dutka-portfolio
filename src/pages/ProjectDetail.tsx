@@ -1,6 +1,5 @@
-
 import React, { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import AnimatedBackground from '../components/AnimatedBackground';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
@@ -93,6 +92,7 @@ const ProjectDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const projectId = parseInt(id || "0");
   const project = projectsData.find(p => p.id === projectId);
+  const navigate = useNavigate();
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -104,7 +104,7 @@ const ProjectDetail: React.FC = () => {
         <div className="text-center">
           <h1 className="text-3xl font-bold mb-4">Project Not Found</h1>
           <p className="mb-8">The project you're looking for doesn't exist.</p>
-          <Link to="/portfolio" className="bg-neon-gold hover:bg-neon-gold/80 text-black font-medium py-2 px-6 rounded-lg transition-colors">
+          <Link to="/portfolio" className="bg-neon-gold hover:bg-neon-gold/80 text-black font-medium py-2 px-6 rounded-lg transition-colors cursor-pointer">
             Return to Portfolio
           </Link>
         </div>
@@ -117,10 +117,13 @@ const ProjectDetail: React.FC = () => {
       <AnimatedBackground />
       
       <div className="container mx-auto px-6 py-16">
-        <Link to="/portfolio" className="inline-flex items-center text-foreground/70 hover:text-neon-gold mb-12 transition-colors">
+        <div 
+          onClick={() => navigate('/portfolio')}
+          className="inline-flex items-center text-foreground/70 hover:text-neon-gold mb-12 transition-colors cursor-pointer"
+        >
           <ArrowLeft size={20} className="mr-2" />
           Back to Portfolio
-        </Link>
+        </div>
         
         <motion.div 
           className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16"
