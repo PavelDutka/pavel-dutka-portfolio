@@ -49,7 +49,7 @@ const projects = [
   {
     id: 6,
     title: "3D models for traffiq addon",
-    description: "Automated workflow for migrating on-premise applications to cloud infrastructure with minimal downtime and comprehensive testing protocols.",
+    description: "Low poly, high quality 3D models for the Traffiq addon. Created using Blender and for maximum visual impact.",
     image: "./images/portfolio/Rowboat.jpg",
     tags: ["Blender", "3D modeling", "Texturing"],
     category: "3D visualization"
