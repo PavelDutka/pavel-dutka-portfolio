@@ -35,7 +35,6 @@ const CustomCursor: React.FC = () => {
         target.closest('button') ||
         target.getAttribute('role') === 'button' ||
         target.classList.contains('cursor-pointer') ||
-        // Also check for TabsTrigger components
         target.closest('[data-radix-collection-item]');
       
       setIsHovering(!!isLink);
@@ -114,7 +113,6 @@ const CustomCursor: React.FC = () => {
             background-color: #e4c76a;
             border-radius: 50%;
             box-shadow: 0 0 10px rgba(228, 199, 106, 0.8);
-            transform: translate3d(0, 0, 0);
             transition: transform 0.1s ease-out;
           }
           
@@ -123,12 +121,12 @@ const CustomCursor: React.FC = () => {
             height: 40px;
             border: 2px solid rgba(228, 199, 106, 0.5);
             border-radius: 50%;
-            transform: translate3d(0, 0, 0);
-            transition: all 0.2s ease-out;
+            transition: width 0.2s ease-out, height 0.2s ease-out, border 0.2s ease-out, background-color 0.2s ease-out;
           }
           
           .cursor-hover {
-            transform: translate3d(0, 0, 0) scale(1.5) !important;
+            width: 60px;
+            height: 60px;
             background-color: rgba(228, 199, 106, 0.1);
             border-color: rgba(228, 199, 106, 0.8);
           }
@@ -137,13 +135,17 @@ const CustomCursor: React.FC = () => {
       <div 
         className={`custom-cursor cursor-dot ${isVisible ? 'opacity-100' : 'opacity-0'}`}
         style={{
-          transform: `translate3d(${position.x}px, ${position.y}px, 0)`,
+          transform: `translate(${position.x}px, ${position.y}px)`,
+          left: 0,
+          top: 0
         }}
       />
       <div 
         className={`custom-cursor cursor-outline ${isVisible ? 'opacity-100' : 'opacity-0'} ${isHovering ? 'cursor-hover' : ''}`}
         style={{
-          transform: `translate3d(${position.x - 20}px, ${position.y - 20}px, 0)`,
+          transform: `translate(${position.x - 20}px, ${position.y - 20}px)`,
+          left: 0,
+          top: 0
         }}
       />
     </>
