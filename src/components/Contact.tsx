@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MessageSquare, Send } from 'lucide-react';
@@ -20,16 +19,17 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formState);
-    // Add actual form submission logic here
+
+    // You don't need to send anything here, Netlify will automatically handle form submissions
     
-    // Reset form
+    // Reset form after submission
     setFormState({
       name: '',
       email: '',
       message: ''
     });
     
-    // Show success message
+    // Optionally, show success message or alert
     alert('Thank you for your message! I will get back to you soon.');
   };
 
@@ -80,8 +80,11 @@ const Contact: React.FC = () => {
           </motion.div>
           
           <motion.form 
+            name="contact-form" // Name attribute is required by Netlify
             onSubmit={handleSubmit}
             className="space-y-6 glass-card p-6 rounded-xl"
+            data-netlify="true" // This tells Netlify to handle the form
+            data-netlify-honeypot="bot-field" // Optional anti-bot field
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
