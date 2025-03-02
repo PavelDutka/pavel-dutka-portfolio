@@ -85,7 +85,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Navigation */}
       <div
-        className={`fixed top-[68px] left-0 right-0 h-screen bg-background/95 backdrop-blur-lg transition-transform duration-300 ease-in-out transform md:hidden glass-card ${
+        className={`fixed top-[68px] left-0 right-0 h-screen bg-background/95 backdrop-blur-lg transition-transform duration-300 ease-in-out transform md:hidden dark-card ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
