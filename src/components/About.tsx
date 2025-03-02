@@ -32,18 +32,14 @@ const timeline = [
 const About: React.FC = () => {
   return (
     <section className="py-24 relative overflow-hidden" id="about">
-      <div 
-        className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-neon-gold/5 to-transparent pointer-events-none"
-        style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 60%)' }}
-      ></div>
+     
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-gradient">About Me</span>
+            <span className="text-gradient">My journey</span>
           </h2>
           <p className="text-foreground/80">
-            My journey through technology and creativity
           </p>
         </div>
         
@@ -56,7 +52,7 @@ const About: React.FC = () => {
             viewport={{ once: true }}
           >
             <p className="text-lg">
-              Originally passionate about game development, I transitioned into 3D modeling and architectural visualization, working at Polygoniq to bring architectural concepts to life.
+            I'm Pavel Dutka, a 3D artist, developer, and automation specialist. From game dev to archviz at polygoniq, I later dived into cybersecurity, IoT, and automation. Now, I bring ideas to life through 3D, web, and automation solutions.
             </p>
             
             <p className="text-lg">

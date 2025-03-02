@@ -48,7 +48,7 @@ const AboutPage: React.FC = () => {
             <span className="text-gradient">About Me</span>
           </h1>
           <p className="text-foreground/80 max-w-3xl mx-auto">
-            Learn more about my journey, skills, and approach to creating digital solutions.
+          I'm a 3D artist, developer, and automation specialist. I started with game development, moved into archviz at polygoniq, and later expanded into cybersecurity, IoT, and automation. Now, I create 3D visuals, web solutions, and automation systems to bring ideas to life.
           </p>
         </motion.div>
 
