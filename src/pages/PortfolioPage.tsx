@@ -11,7 +11,7 @@ const projects = [
     id: 1,
     title: "Modern House Archviz",
     description: "High-quality architectural visualization of a contemporary house. Created using Blender and post-processed in Photoshop for maximum visual impact.",
-    image: "./images/portfolio/house.png",
+    image: "./images/portfolio/house.webp",
     tags: ["3D Visualization", "Architecture", "Blender"],
     category: "3d"
   },
@@ -19,7 +19,7 @@ const projects = [
     id: 2,
     title: "Tiny house visualisation",
     description: "Realistic render of a mountain retreat with attention to atmospheric lighting and environmental details.",
-    image: "./images/portfolio/tinyHouse.png",
+    image: "./images/portfolio/tinyHouse.webp",
     tags: ["3D Visualization", "Environment", "Lighting"],
     category: "3d"
   },
@@ -27,7 +27,7 @@ const projects = [
     id: 3,
     title: "Financial Advisor Website",
     description: "Clean, professional website design for a financial advisory firm with interactive UI elements. Built with React and includes custom charts, calculators, and client portal.",
-    image: "./images/portfolio/patrman_mockup.png",
+    image: "./images/portfolio/patrman_mockup.webp",
     tags: ["Web Design", "UI/UX", "React"],
     category: "web"
   },
@@ -35,14 +35,14 @@ const projects = [
     id: 4,
     title: "Portfolio website",
     description: "Clean, professional website design for my personal brand with interactive UI elements.",
-    image: "./images/portfolio/portfolio_mockup.png",
+    image: "./images/portfolio/portfolio_mockup.webp",
     tags: ["Web Design", "UI/UX", "React"],
   },
   {
     id: 5,
     title: "Puppet Automation Setup",
     description: "Complex infrastructure automation implementation with visual workflow diagrams and monitoring. Designed for a medium-sized tech company to streamline deployments.",
-    image: "./images/portfolio/puppet_automation.png",
+    image: "./images/portfolio/puppet_automation.webp",
     tags: ["Automation", "DevOps", "Infrastructure"],
     category: "automation"
   },
