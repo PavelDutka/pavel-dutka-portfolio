@@ -87,6 +87,33 @@ Key features developed:
     repoLink: "https://github.com/yourusername/finance-website"
   },
   {
+    id: 4,
+    title: "Portfolio website",
+    description: "Clean, professional website design for my personal brand with interactive UI elements.",
+    fullDescription: `This portfolio website project showcases my work and skills using modern web technologies. The site features a clean, minimalist design with interactive elements and smooth animations to create an engaging user experience.
+
+Development highlights:
+- React-based frontend with TypeScript for type safety
+- Framer Motion animations for smooth transitions and effects
+- Responsive design that works flawlessly on all devices
+- Custom-built components and layout system
+- Dark mode support with theme switching
+- Project filtering and categorization`,
+    image: "./images/portfolio/portfolio_mockup.webp",
+    gallery: [
+      "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=2000&q=80",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=2000&q=80",
+      "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=2000&q=80"
+    ],
+    tags: ["Web Design", "UI/UX", "React"],
+    tools: ["React", "TypeScript", "Framer Motion", "Tailwind CSS"],
+    client: "Personal Project",
+    year: "2023",
+    category: "web",
+    liveLink: "https://example.com/portfolio",
+    repoLink: "https://github.com/yourusername/portfolio"
+  },
+  {
     id: 5,
     title: "Puppet Automation Setup",
     description: "Complex infrastructure automation implementation with visual workflow diagrams and monitoring. Designed for a medium-sized tech company to streamline deployments.",

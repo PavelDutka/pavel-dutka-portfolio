@@ -8,21 +8,21 @@ const projects = [
     id: 1,
     title: "Modern House Archviz",
     description: "High-quality architectural visualization of a contemporary house",
-    image: "./images/portfolio/house.png",
+    image: "./images/portfolio/house.webp",
     tags: ["3D Visualization", "Architecture", "Blender"],
   },
   {
     id: 4,
     title: "Portfolio website",
     description: "Clean, professional website design for my personal brand with interactive UI elements.",
-    image: "./images/portfolio/portfolio_mockup.png",
+    image: "./images/portfolio/portfolio_mockup.webp",
     tags: ["Web Design", "UI/UX", "React"],
   },
   {
-    id: 3,
+    id: 5,
     title: "Puppet Automation Setup",
     description: "Complex infrastructure automation implementation with visual workflow diagrams and monitoring.",
-    image: "./images/portfolio/puppet_automation.png",
+    image: "./images/portfolio/puppet_automation.webp",
     tags: ["Automation", "DevOps", "Infrastructure"],
   }
 ];
