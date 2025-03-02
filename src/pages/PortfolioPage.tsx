@@ -10,16 +10,16 @@ const projects = [
   {
     id: 1,
     title: "Modern House Archviz",
-    description: "High-quality architectural visualization of a contemporary house with before/after comparison. Created using Blender and post-processed in Photoshop for maximum visual impact.",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=80",
+    description: "High-quality architectural visualization of a contemporary house. Created using Blender and post-processed in Photoshop for maximum visual impact.",
+    image: "./images/portfolio/house.png",
     tags: ["3D Visualization", "Architecture", "Blender"],
     category: "3d"
   },
   {
     id: 2,
-    title: "Mountain Cabin Visualization",
-    description: "Realistic render of a mountain retreat with attention to atmospheric lighting and environmental details. Created for a luxury real estate developer's marketing campaign.",
-    image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=2000&q=80",
+    title: "Tiny house visualisation",
+    description: "Realistic render of a mountain retreat with attention to atmospheric lighting and environmental details.",
+    image: "./images/portfolio/tinyHouse.png",
     tags: ["3D Visualization", "Environment", "Lighting"],
     category: "3d"
   },
@@ -27,33 +27,32 @@ const projects = [
     id: 3,
     title: "Financial Advisor Website",
     description: "Clean, professional website design for a financial advisory firm with interactive UI elements. Built with React and includes custom charts, calculators, and client portal.",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=2000&q=80",
+    image: "./images/portfolio/patrman_mockup.png",
     tags: ["Web Design", "UI/UX", "React"],
     category: "web"
   },
   {
     id: 4,
-    title: "Restaurant Ordering App",
-    description: "Mobile-friendly web application for a restaurant chain, allowing customers to browse the menu, place orders, and make payments online.",
-    image: "https://images.unsplash.com/photo-1555421689-3f034debb7a6?auto=format&fit=crop&w=2000&q=80",
-    tags: ["Web App", "Mobile", "E-commerce"],
-    category: "web"
+    title: "Portfolio website",
+    description: "Clean, professional website design for my personal brand with interactive UI elements.",
+    image: "./images/portfolio/portfolio_mockup.png",
+    tags: ["Web Design", "UI/UX", "React"],
   },
   {
     id: 5,
     title: "Puppet Automation Setup",
     description: "Complex infrastructure automation implementation with visual workflow diagrams and monitoring. Designed for a medium-sized tech company to streamline deployments.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=80",
+    image: "./images/portfolio/puppet_automation.png",
     tags: ["Automation", "DevOps", "Infrastructure"],
     category: "automation"
   },
   {
     id: 6,
-    title: "Cloud Migration Pipeline",
+    title: "3D models for traffiq addon",
     description: "Automated workflow for migrating on-premise applications to cloud infrastructure with minimal downtime and comprehensive testing protocols.",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=80",
-    tags: ["Cloud", "CI/CD", "Migration"],
-    category: "automation"
+    image: "./images/portfolio/Rowboat.jpg",
+    tags: ["Blender", "3D modeling", "Texturing"],
+    category: "3D visualization"
   }
 ];
 
