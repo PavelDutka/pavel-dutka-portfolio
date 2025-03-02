@@ -37,6 +37,7 @@ const projects = [
     description: "Clean, professional website design for my personal brand with interactive UI elements.",
     image: "./images/portfolio/portfolio_mockup.webp",
     tags: ["Web Design", "UI/UX", "React"],
+    category: "web"
   },
   {
     id: 5,
@@ -52,7 +53,7 @@ const projects = [
     description: "Low poly, high quality 3D models for the Traffiq addon. Created using Blender and for maximum visual impact.",
     image: "./images/portfolio/Rowboat.jpg",
     tags: ["Blender", "3D modeling", "Texturing"],
-    category: "3D visualization"
+    category: "3d"
   }
 ];
 
