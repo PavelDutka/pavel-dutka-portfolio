@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CircuitBoard, Monitor, Box, Workflow } from 'lucide-react';
+import { CircuitBoard, Monitor, Box, Workflow, Code, PenTool, Settings } from 'lucide-react';
 
 const timeline = [
   {
@@ -13,14 +12,14 @@ const timeline = [
   {
     year: "2018",
     title: "3D & Archviz Focus",
-    description: "Transitioned into 3D modeling and architectural visualization at Polygoniq",
+    description: "Transitioned into 3D modeling and architectural visualization at polygoniq",
     icon: <Box className="text-neon-gold" size={24} />
   },
   {
     year: "2020",
     title: "Web Development",
     description: "Expanded skillset to include responsive web application development",
-    icon: <Monitor className="text-neon-amber" size={24} />
+    icon: <Code className="text-neon-amber" size={24} />
   },
   {
     year: "2022",

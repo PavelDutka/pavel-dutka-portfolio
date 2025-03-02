@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 
 const CustomCursor: React.FC = () => {
@@ -114,6 +113,7 @@ const CustomCursor: React.FC = () => {
             border-radius: 50%;
             box-shadow: 0 0 10px rgba(228, 199, 106, 0.8);
             transition: transform 0.1s ease-out;
+            transform-origin: center center;
           }
           
           .cursor-outline {
@@ -122,6 +122,7 @@ const CustomCursor: React.FC = () => {
             border: 2px solid rgba(228, 199, 106, 0.5);
             border-radius: 50%;
             transition: width 0.2s ease-out, height 0.2s ease-out, border 0.2s ease-out, background-color 0.2s ease-out;
+            transform-origin: center center;
           }
           
           .cursor-hover {
@@ -135,17 +136,13 @@ const CustomCursor: React.FC = () => {
       <div 
         className={`custom-cursor cursor-dot ${isVisible ? 'opacity-100' : 'opacity-0'}`}
         style={{
-          transform: `translate(${position.x}px, ${position.y}px)`,
-          left: 0,
-          top: 0
+          transform: `translate(${position.x - 4}px, ${position.y - 4}px)` // Adjust by half the dot size (8px / 2)
         }}
       />
       <div 
         className={`custom-cursor cursor-outline ${isVisible ? 'opacity-100' : 'opacity-0'} ${isHovering ? 'cursor-hover' : ''}`}
         style={{
-          transform: `translate(${position.x - 20}px, ${position.y - 20}px)`,
-          left: 0,
-          top: 0
+          transform: `translate(${position.x - 20}px, ${position.y - 20}px)` // Adjust by half the outline size (40px / 2)
         }}
       />
     </>

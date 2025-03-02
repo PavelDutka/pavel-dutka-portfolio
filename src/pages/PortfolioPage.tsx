@@ -88,32 +88,7 @@ const PortfolioPage: React.FC = () => {
         </motion.div>
 
         <Tabs value={activeTab} defaultValue="all" className="w-full" onValueChange={handleTabChange}>
-          <TabsList className="flex justify-center mb-12 bg-transparent">
-            <TabsTrigger 
-              value="all" 
-              className="px-6 py-2 data-[state=active]:bg-neon-purple/20 data-[state=active]:text-neon-purple rounded-md cursor-pointer"
-            >
-              All Projects
-            </TabsTrigger>
-            <TabsTrigger 
-              value="3d" 
-              className="px-6 py-2 data-[state=active]:bg-neon-purple/20 data-[state=active]:text-neon-purple rounded-md cursor-pointer"
-            >
-              3D Visualization
-            </TabsTrigger>
-            <TabsTrigger 
-              value="web" 
-              className="px-6 py-2 data-[state=active]:bg-neon-purple/20 data-[state=active]:text-neon-purple rounded-md cursor-pointer"
-            >
-              Web Development
-            </TabsTrigger>
-            <TabsTrigger 
-              value="automation" 
-              className="px-6 py-2 data-[state=active]:bg-neon-purple/20 data-[state=active]:text-neon-purple rounded-md cursor-pointer"
-            >
-              Automation
-            </TabsTrigger>
-          </TabsList>
+         
           
           <TabsContent value="all" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
