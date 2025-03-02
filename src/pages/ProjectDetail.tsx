@@ -1,9 +1,14 @@
-
 import React, { useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import AnimatedBackground from '../components/AnimatedBackground';
-import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
+import { 
+  ProjectHeader, 
+  ProjectDetailsSidebar, 
+  ProjectGallery, 
+  ProjectNavigation,
+  ProjectNotFound
+} from '../components/project-detail';
 
 // Project data from the portfolio
 const projectsData = [
@@ -172,24 +177,13 @@ const ProjectDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const projectId = parseInt(id || "0");
   const project = projectsData.find(p => p.id === projectId);
-  const navigate = useNavigate();
   
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   
   if (!project) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4">Project Not Found</h1>
-          <p className="mb-8">The project you're looking for doesn't exist.</p>
-          <Link to="/portfolio" className="bg-neon-gold hover:bg-neon-gold/80 text-black font-medium py-2 px-6 rounded-lg transition-colors cursor-pointer">
-            Return to Portfolio
-          </Link>
-        </div>
-      </div>
-    );
+    return <ProjectNotFound />;
   }
 
   return (
@@ -197,13 +191,7 @@ const ProjectDetail: React.FC = () => {
       <AnimatedBackground />
       
       <div className="container mx-auto px-6 py-16">
-        <button 
-          onClick={() => navigate('/portfolio')}
-          className="inline-flex items-center text-foreground/70 hover:text-neon-gold mb-12 transition-colors cursor-pointer"
-        >
-          <ArrowLeft size={20} className="mr-2" />
-          Back to Portfolio
-        </button>
+        <ProjectNavigation />
         
         <motion.div 
           className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16"
@@ -212,108 +200,28 @@ const ProjectDetail: React.FC = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="lg:col-span-2">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-gradient">{project.title}</span>
-            </h1>
-            
-            <p className="text-lg mb-8 text-foreground/90">
-              {project.description}
-            </p>
-            
-            <div className="prose prose-invert max-w-none mb-8">
-              {project.fullDescription.split('\n\n').map((paragraph, index) => (
-                <p key={index} className="mb-4">{paragraph}</p>
-              ))}
-            </div>
-            
-            <div className="flex flex-wrap gap-3 mb-8">
-              {project.tags.map((tag, index) => (
-                <span 
-                  key={index} 
-                  className="px-3 py-1 rounded-full bg-neon-purple/20 text-neon-purple/80 text-sm"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-            
-            <div className="flex flex-wrap gap-4">
-              {project.liveLink && (
-                <a 
-                  href={project.liveLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center bg-neon-gold hover:bg-neon-gold/80 text-black font-medium py-2 px-6 rounded-lg transition-colors"
-                >
-                  View Live <ExternalLink size={16} className="ml-2" />
-                </a>
-              )}
-              
-              {project.repoLink && (
-                <a 
-                  href={project.repoLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center bg-white/10 hover:bg-white/15 text-white font-medium py-2 px-6 rounded-lg transition-colors"
-                >
-                  View Code <Github size={16} className="ml-2" />
-                </a>
-              )}
-            </div>
+            <ProjectHeader 
+              title={project.title}
+              description={project.description}
+              fullDescription={project.fullDescription}
+              tags={project.tags}
+              liveLink={project.liveLink}
+              repoLink={project.repoLink}
+            />
           </div>
           
-          <div className="glass-card p-6 rounded-xl h-fit">
-            <h3 className="text-xl font-semibold mb-4">Project Details</h3>
-            
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-sm text-foreground/60 mb-1">Client</h4>
-                <p className="font-medium">{project.client}</p>
-              </div>
-              
-              <div>
-                <h4 className="text-sm text-foreground/60 mb-1">Year</h4>
-                <p className="font-medium">{project.year}</p>
-              </div>
-              
-              <div>
-                <h4 className="text-sm text-foreground/60 mb-1">Category</h4>
-                <p className="font-medium capitalize">{project.category}</p>
-              </div>
-              
-              <div>
-                <h4 className="text-sm text-foreground/60 mb-1">Tools Used</h4>
-                <div className="flex flex-wrap gap-2">
-                  {project.tools.map((tool, index) => (
-                    <span key={index} className="px-2 py-1 rounded bg-white/5 text-xs">{tool}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+          <ProjectDetailsSidebar 
+            client={project.client}
+            year={project.year}
+            category={project.category}
+            tools={project.tools}
+          />
         </motion.div>
         
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-8">Project Gallery</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {project.gallery.map((image, index) => (
-              <motion.div
-                key={index}
-                className="rounded-xl overflow-hidden aspect-video"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <img 
-                  src={image} 
-                  alt={`${project.title} - Gallery ${index + 1}`} 
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-            ))}
-          </div>
-        </div>
+        <ProjectGallery 
+          images={project.gallery} 
+          title={project.title} 
+        />
       </div>
     </div>
   );
