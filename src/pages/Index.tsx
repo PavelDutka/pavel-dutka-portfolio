@@ -16,11 +16,12 @@ const Index: React.FC = () => {
     <div className="min-h-screen relative">
       <AnimatedBackground />
       <Hero />
+      <div className="section-divider" />
+      <About />
       <WhatIDo />
       <div className="section-divider" />
       <Portfolio />
-      <div className="section-divider" />
-      <About />
+      
       <div className="section-divider" />
       <Contact />
     </div>
