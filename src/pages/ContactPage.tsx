@@ -24,9 +24,6 @@ const ContactPage: React.FC = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-gradient">Contact Me</span>
           </h1>
-          <p className="text-foreground/80">
-            Let's discuss your project and bring your vision to life.
-          </p>
         </motion.div>
 
         <Contact />
@@ -45,7 +42,7 @@ const ContactPage: React.FC = () => {
               </div>
               <h3 className="text-lg font-semibold mb-2">Location</h3>
               <p className="text-foreground/70">
-                Prague, Czech Republic
+                Czech Republic
               </p>
             </motion.div>
             

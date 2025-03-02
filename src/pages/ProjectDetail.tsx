@@ -26,9 +26,9 @@ The project involved:
 - Creating before/after comparisons to demonstrate the transformation`,
     image: "./images/portfolio/house.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1600607687644-c94bf5588963?auto=format&fit=crop&w=2000&q=80",
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=2000&q=80",
-      "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=2000&q=80"
+      "../images/portfolio/house.webp",
+      "../images/portfolio/LivingRoom__mq_1030_Azure_Sun.001_Composite.png",
+      "../images/portfolio/PCroom2__mq_1030_Azure_Sun.001_Composite.png"
     ],
     tags: ["3D Visualization", "Architecture", "Blender"],
     tools: ["Blender", "Photoshop", "Substance Painter"],
@@ -159,17 +159,17 @@ The project deliverables included:
 - Level of detail (LOD) variations for performance scaling`,
     image: "./images/portfolio/Rowboat.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1563206767-5b18f218e8de?auto=format&fit=crop&w=2000&q=80",
-      "https://images.unsplash.com/photo-1597742200067-87e942b5c6aa?auto=format&fit=crop&w=2000&q=80",
-      "https://images.unsplash.com/photo-1611486212557-88be5ff6f941?auto=format&fit=crop&w=2000&q=80"
+      "../images/portfolio/Rowboat.jpg",
+      "../images/portfolio/Boeing_737.png",
+      "../images/portfolio/Canoe.jpg"
     ],
     tags: ["Blender", "3D modeling", "Texturing"],
     tools: ["Blender", "Substance Painter", "Unity"],
     client: "Traffiq Addon Team",
     year: "2022",
     category: "3d",
-    liveLink: "https://example.com/traffiq-models",
-    repoLink: "https://github.com/yourusername/traffiq-models"
+    liveLink: "https://blendermarket.com/products/car-library-traffiq-vehicles-for-blender?search_id=37615550",
+    repoLink: "https://blendermarket.com/products/car-library-traffiq-vehicles-for-blender?search_id=37615550"
   }
 ];
 

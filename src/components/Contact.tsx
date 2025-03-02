@@ -77,11 +77,6 @@ const Contact: React.FC = () => {
               </a>
             </div>
             
-            <blockquote className="border-l-4 border-neon-amber pl-4 py-2 mt-6 glass-card">
-              <p className="italic text-foreground/90">
-                "Want to collaborate? Let's talk!"
-              </p>
-            </blockquote>
           </motion.div>
           
           <motion.form 
