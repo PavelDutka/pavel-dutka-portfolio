@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -117,13 +118,13 @@ const ProjectDetail: React.FC = () => {
       <AnimatedBackground />
       
       <div className="container mx-auto px-6 py-16">
-        <div 
+        <button 
           onClick={() => navigate('/portfolio')}
           className="inline-flex items-center text-foreground/70 hover:text-neon-gold mb-12 transition-colors cursor-pointer"
         >
           <ArrowLeft size={20} className="mr-2" />
           Back to Portfolio
-        </div>
+        </button>
         
         <motion.div 
           className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16"
