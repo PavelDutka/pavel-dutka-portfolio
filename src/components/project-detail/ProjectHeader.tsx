@@ -53,7 +53,13 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
             href={liveLink} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center bg-neon-gold hover:bg-neon-gold/80 text-black font-medium py-2 px-6 rounded-lg transition-colors"
+            className="inline-flex items-center bg-neon-gold hover:bg-neon-gold/80 text-black font-medium py-2 px-6 rounded-lg transition-colors cursor-pointer"
+            onClick={(e) => {
+              // Prevent default in case of issues
+              if (typeof window !== 'undefined') {
+                window.open(liveLink, '_blank', 'noopener,noreferrer');
+              }
+            }}
           >
             View Live <ExternalLink size={16} className="ml-2" />
           </a>
@@ -64,7 +70,13 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
             href={repoLink} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center bg-white/10 hover:bg-white/15 text-white font-medium py-2 px-6 rounded-lg transition-colors"
+            className="inline-flex items-center bg-white/10 hover:bg-white/15 text-white font-medium py-2 px-6 rounded-lg transition-colors cursor-pointer"
+            onClick={(e) => {
+              // Prevent default in case of issues
+              if (typeof window !== 'undefined') {
+                window.open(repoLink, '_blank', 'noopener,noreferrer');
+              }
+            }}
           >
             View Code <Github size={16} className="ml-2" />
           </a>
