@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 
 const CustomCursor: React.FC = () => {
@@ -44,22 +45,19 @@ const CustomCursor: React.FC = () => {
     window.addEventListener('mouseleave', handleMouseLeave);
     window.addEventListener('mouseover', handleLinkHover);
     
-    // Apply cursor: none to body
-    document.body.style.cursor = 'none';
-    
-    // Apply cursor: none to all interactive elements
-    const applyNoCursor = () => {
-      const elements = document.querySelectorAll('a, button, [role="button"], input, select, textarea, [data-radix-collection-item]');
+    // Remove cursor: none from interactive elements to ensure they work
+    const applyPointerCursor = () => {
+      const elements = document.querySelectorAll('a, button, [role="button"], .cursor-pointer, [data-radix-collection-item]');
       elements.forEach((el) => {
-        (el as HTMLElement).style.cursor = 'none';
+        (el as HTMLElement).style.cursor = 'pointer';
       });
     };
     
     // Run initially
-    applyNoCursor();
+    applyPointerCursor();
     
     // Set up a MutationObserver to watch for changes to the DOM
-    const observer = new MutationObserver(applyNoCursor);
+    const observer = new MutationObserver(applyPointerCursor);
     observer.observe(document.body, {
       childList: true,
       subtree: true
@@ -72,8 +70,7 @@ const CustomCursor: React.FC = () => {
       window.removeEventListener('mouseover', handleLinkHover);
       
       // Restore default cursor on cleanup
-      document.body.style.cursor = '';
-      document.querySelectorAll('a, button, [role="button"], input, select, textarea, [data-radix-collection-item]').forEach((el) => {
+      document.querySelectorAll('a, button, [role="button"], .cursor-pointer, [data-radix-collection-item]').forEach((el) => {
         (el as HTMLElement).style.cursor = '';
       });
       
@@ -94,10 +91,6 @@ const CustomCursor: React.FC = () => {
     <>
       <style>
         {`
-          * {
-            cursor: none !important;
-          }
-          
           .custom-cursor {
             pointer-events: none;
             position: fixed;
@@ -130,6 +123,11 @@ const CustomCursor: React.FC = () => {
             height: 60px;
             background-color: rgba(228, 199, 106, 0.1);
             border-color: rgba(228, 199, 106, 0.8);
+          }
+
+          /* Enable default cursor behavior */
+          a, button, [role="button"], .cursor-pointer {
+            cursor: pointer !important;
           }
         `}
       </style>

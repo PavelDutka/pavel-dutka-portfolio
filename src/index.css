@@ -67,6 +67,11 @@
   p {
     @apply text-foreground/90 leading-relaxed;
   }
+
+  /* Fix cursor pointer issues */
+  a, button, [role="button"], .cursor-pointer {
+    cursor: pointer !important;
+  }
 }
 
 @layer utilities {

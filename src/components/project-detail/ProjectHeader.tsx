@@ -47,23 +47,29 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
         ))}
       </div>
       
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap gap-4 relative z-10">
         {liveLink && (
-          <button 
-            className="inline-flex items-center bg-neon-gold hover:bg-neon-gold/80 text-black font-medium py-2 px-6 rounded-lg transition-colors cursor-pointer"
-            onClick={() => window.open(liveLink, '_blank', 'noopener,noreferrer')}
+          <a 
+            href={liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center bg-neon-gold hover:bg-neon-gold/80 text-black font-medium py-2 px-6 rounded-lg transition-colors !cursor-pointer"
+            style={{ cursor: 'pointer' }}
           >
             View Live <ExternalLink size={16} className="ml-2" />
-          </button>
+          </a>
         )}
         
         {repoLink && (
-          <button 
-            className="inline-flex items-center bg-white/10 hover:bg-white/15 text-white font-medium py-2 px-6 rounded-lg transition-colors cursor-pointer"
-            onClick={() => window.open(repoLink, '_blank', 'noopener,noreferrer')}
+          <a 
+            href={repoLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center bg-white/10 hover:bg-white/15 text-white font-medium py-2 px-6 rounded-lg transition-colors !cursor-pointer"
+            style={{ cursor: 'pointer' }}
           >
             View Code <Github size={16} className="ml-2" />
-          </button>
+          </a>
         )}
       </div>
     </div>
