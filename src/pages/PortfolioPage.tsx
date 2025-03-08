@@ -59,7 +59,7 @@ const projects = [
     id: 7,
     title: "Product Render: Luxury Pen",
     description: "Ultra-detailed product visualization of a high-end fountain pen with precise material definition and studio lighting setup.",
-    image: "./images/portfolio/front.png",
+    image: "./images/portfolio/WF_papez_A_wide.webp",
     tags: ["Product Visualization", "Lighting", "Materials"],
     category: "3d"
   },
@@ -67,7 +67,7 @@ const projects = [
     id: 8,
     title: "Endless Engines Animation",
     description: "Technical animation challenge showcasing the internal mechanics of various engine types with smooth transitions and accurate physics.",
-    image: "./images/portfolio/Boeing_737.png",
+    image: "./images/portfolio/EE_anim.jpg",
     tags: ["Animation", "Technical", "Mechanical"],
     category: "3d"
   },
@@ -75,7 +75,7 @@ const projects = [
     id: 9,
     title: "Haas and Sohn Visualization",
     description: "Photorealistic visualization of Haas and Sohn stoves showing detailed materials, lighting and environmental integration for marketing purposes.",
-    image: "./images/portfolio/LivingRoom__mq_1030_Azure_Sun.001_Composite.png",
+    image: "./images/portfolio/Bregenz.webp",
     tags: ["Product Visualization", "Interior Design", "Lighting"],
     category: "3d"
   }
