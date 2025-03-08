@@ -71,25 +71,33 @@
   /* Fix cursor pointer issues */
   a, button, [role="button"], .cursor-pointer {
     cursor: pointer !important;
+    z-index: 10;
+    position: relative;
   }
 }
 
 @layer utilities {
   .text-glow {
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3);
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5), 0 0 30px rgba(255, 215, 0, 0.3);
   }
   
   .text-glow-amber {
-    text-shadow: 0 0 10px rgba(255, 193, 7, 0.5), 0 0 20px rgba(255, 193, 7, 0.3);
+    text-shadow: 0 0 15px rgba(255, 193, 7, 0.5), 0 0 30px rgba(255, 193, 7, 0.3);
   }
   
   .glass-card {
     @apply backdrop-blur-md bg-white/5 border border-white/10 shadow-lg;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .glass-card:hover {
+    @apply transform -translate-y-1 shadow-xl bg-white/10 border-white/15;
+    box-shadow: 0 10px 40px -10px rgba(255, 215, 0, 0.2);
   }
   
   .dark-card {
     background-color: #0a0a0c;
-}
+  }
 
   .circuit-bg {
     background-image: linear-gradient(to bottom, rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.98)) /*, 
