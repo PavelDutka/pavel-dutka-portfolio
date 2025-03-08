@@ -93,21 +93,20 @@ const PortfolioPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen relative pt-32">
+    <div className="min-h-screen relative pt-24">
       <AnimatedBackground />
       
       <div className="container mx-auto px-6 py-16">
         <motion.div 
-          className="max-w-3xl mx-auto text-center mb-16 relative"
+          className="max-w-3xl mx-auto text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-lg -z-10"></div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 pt-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-gradient">My Work</span>
           </h1>
-          <p className="text-foreground/90 mb-4 px-6">
+          <p className="text-foreground/80">
             Explore my projects across 3D visualization, web development, and automation solutions.
           </p>
         </motion.div>

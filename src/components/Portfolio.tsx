@@ -38,12 +38,11 @@ const Portfolio: React.FC = () => {
   return (
     <section className="py-24 relative" id="portfolio">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16 relative">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg -z-10"></div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 pt-4">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="text-gradient">Featured Projects</span>
           </h2>
-          <p className="text-foreground/80 mb-4 px-4">
+          <p className="text-foreground/80">
             A selection of my work in 3D visualization, web development, and automation.
           </p>
         </div>
