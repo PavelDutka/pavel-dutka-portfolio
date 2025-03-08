@@ -54,6 +54,30 @@ const projects = [
     image: "./images/portfolio/Rowboat.jpg",
     tags: ["Blender", "3D modeling", "Texturing"],
     category: "3d"
+  },
+  {
+    id: 7,
+    title: "Product Render: Luxury Pen",
+    description: "Ultra-detailed product visualization of a high-end fountain pen with precise material definition and studio lighting setup.",
+    image: "./images/portfolio/front.png",
+    tags: ["Product Visualization", "Lighting", "Materials"],
+    category: "3d"
+  },
+  {
+    id: 8,
+    title: "Endless Engines Animation",
+    description: "Technical animation challenge showcasing the internal mechanics of various engine types with smooth transitions and accurate physics.",
+    image: "./images/portfolio/Boeing_737.png",
+    tags: ["Animation", "Technical", "Mechanical"],
+    category: "3d"
+  },
+  {
+    id: 9,
+    title: "Haas and Sohn Visualization",
+    description: "Photorealistic visualization of Haas and Sohn stoves showing detailed materials, lighting and environmental integration for marketing purposes.",
+    image: "./images/portfolio/LivingRoom__mq_1030_Azure_Sun.001_Composite.png",
+    tags: ["Product Visualization", "Interior Design", "Lighting"],
+    category: "3d"
   }
 ];
 
@@ -88,7 +112,12 @@ const PortfolioPage: React.FC = () => {
         </motion.div>
 
         <Tabs value={activeTab} defaultValue="all" className="w-full" onValueChange={handleTabChange}>
-         
+          <TabsList className="grid w-full max-w-md mx-auto grid-cols-4 mb-8">
+            <TabsTrigger value="all">All</TabsTrigger>
+            <TabsTrigger value="3d">3D</TabsTrigger>
+            <TabsTrigger value="web">Web</TabsTrigger>
+            <TabsTrigger value="automation">DevOps</TabsTrigger>
+          </TabsList>
           
           <TabsContent value="all" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (

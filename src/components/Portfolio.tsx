@@ -24,6 +24,13 @@ const projects = [
     description: "Complex infrastructure automation implementation with visual workflow diagrams and monitoring.",
     image: "./images/portfolio/puppet_automation.webp",
     tags: ["Automation", "DevOps", "Infrastructure"],
+  },
+  {
+    id: 9,
+    title: "Haas and Sohn Visualization",
+    description: "Photorealistic visualization of Haas and Sohn stoves showing detailed materials and lighting.",
+    image: "./images/portfolio/LivingRoom__mq_1030_Azure_Sun.001_Composite.png",
+    tags: ["Product Visualization", "Interior Design", "Lighting"],
   }
 ];
 
@@ -40,7 +47,7 @@ const Portfolio: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {projects.map((project) => (
             <Link to={`/project/${project.id}`} key={project.id} className="block">
               <ProjectCard

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Github, Linkedin, Mail } from 'lucide-react';
@@ -8,7 +9,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <Link to="/" className="text-xl font-display font-bold text-white inline-block mb-4">
+            <Link to="/" className="text-xl font-display font-bold text-white inline-block mb-4 hover:text-neon-gold transition-colors duration-300">
               <span className="text-gradient">Pavel Dutka</span>
             </Link>
             <p className="text-foreground/70 max-w-md">
@@ -23,7 +24,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link 
                   to="/" 
-                  className="text-foreground/70 hover:text-neon-purple transition-colors duration-300"
+                  className="text-foreground/70 hover:text-neon-gold transition-colors duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-neon-gold after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
                 >
                   Home
                 </Link>
@@ -31,7 +32,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link 
                   to="/portfolio" 
-                  className="text-foreground/70 hover:text-neon-purple transition-colors duration-300"
+                  className="text-foreground/70 hover:text-neon-gold transition-colors duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-neon-gold after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
                 >
                   Portfolio
                 </Link>
@@ -39,7 +40,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link 
                   to="/about" 
-                  className="text-foreground/70 hover:text-neon-purple transition-colors duration-300"
+                  className="text-foreground/70 hover:text-neon-gold transition-colors duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-neon-gold after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
                 >
                   About
                 </Link>
@@ -47,7 +48,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link 
                   to="/contact" 
-                  className="text-foreground/70 hover:text-neon-purple transition-colors duration-300"
+                  className="text-foreground/70 hover:text-neon-gold transition-colors duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-neon-gold after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
                 >
                   Contact
                 </Link>
@@ -62,26 +63,26 @@ const Footer: React.FC = () => {
                 href="https://github.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-neon-purple/20 transition-colors duration-300"
+                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-neon-gold/20 transition-colors duration-300 hover:scale-110 transform"
                 aria-label="GitHub"
               >
-                <Github size={20} className="text-foreground" />
+                <Github size={20} className="text-foreground hover:text-neon-gold transition-colors duration-300" />
               </a>
               <a 
                 href="https://linkedin.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-neon-purple/20 transition-colors duration-300"
+                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-neon-gold/20 transition-colors duration-300 hover:scale-110 transform"
                 aria-label="LinkedIn"
               >
-                <Linkedin size={20} className="text-foreground" />
+                <Linkedin size={20} className="text-foreground hover:text-neon-gold transition-colors duration-300" />
               </a>
               <a 
                 href="mailto:contact@paveldutka.com" 
-                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-neon-purple/20 transition-colors duration-300"
+                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-neon-gold/20 transition-colors duration-300 hover:scale-110 transform"
                 aria-label="Email"
               >
-                <Mail size={20} className="text-foreground" />
+                <Mail size={20} className="text-foreground hover:text-neon-gold transition-colors duration-300" />
               </a>
             </div>
           </div>
