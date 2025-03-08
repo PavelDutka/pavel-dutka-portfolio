@@ -31,12 +31,12 @@ The project involved:
       "../images/portfolio/PCroom2__mq_1030_Azure_Sun.001_Composite.png"
     ],
     tags: ["3D Visualization", "Architecture", "Blender"],
-    tools: ["Blender", "Photoshop", "Substance Painter"],
-    client: "Architectural Design Studio",
+    tools: ["Blender", "Photoshop", "botaniq"],
+    client: "Showcase project",
     year: "2022",
-    category: "3d",
-    liveLink: "https://example.com/house-project",
-    repoLink: "https://github.com/yourusername/house-project"
+    category: "3D",
+    liveLink: "/404",
+    repoLink: "/404"
   },
   {
     id: 2,
@@ -52,17 +52,17 @@ Key aspects of this project:
 - Multiple perspective views to communicate the full design concept`,
     image: "./images/portfolio/tinyHouse.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=2000&q=80",
-      "https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?auto=format&fit=crop&w=2000&q=80",
-      "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=2000&q=80"
+      "/images/portfolio/tinyHouse.webp",
+      "/images/portfolio/front.png",
+      "/images/portfolio/tinyHouse.webp"
     ],
     tags: ["3D Visualization", "Environment", "Lighting"],
-    tools: ["Blender", "Photoshop", "HDRI Haven"],
+    tools: ["Blender", "Photoshop", "botaniq"],
     client: "Eco Living Concepts",
     year: "2023",
     category: "3d",
-    liveLink: "https://example.com/tiny-house-project",
-    repoLink: "https://github.com/yourusername/tiny-house-project"
+    liveLink: "/404",
+    repoLink: "/404"
   },
   {
     id: 3,
@@ -79,12 +79,12 @@ Key features developed:
 - SEO optimization`,
     image: "./images/portfolio/patrman_mockup.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=2000&q=80",
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=2000&q=80",
+      "/images/portfolio/patrman_mockup.webp",
+      "/images/portfolio/Screenshot 2025-03-07 231031.jpg",
       "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=2000&q=80"
     ],
     tags: ["Web Design", "UI/UX", "React"],
-    tools: ["React", "TypeScript", "Chart.js", "Node.js"],
+    tools: ["HTML", "CSS", "javascript", "php"],
     client: "Financial Advisors Inc.",
     year: "2023",
     category: "web",
