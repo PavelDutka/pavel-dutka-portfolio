@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MessageSquare, Send } from 'lucide-react';
@@ -34,14 +35,14 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section className="py-24 relative overflow-hidden" id="contact">
+    <section className="py-12 md:py-24 relative overflow-hidden w-full" id="contact">
       <div 
         className="absolute bottom-0 right-0 w-full h-64 bg-gradient-to-t from-neon-amber/5 to-transparent pointer-events-none"
         style={{ clipPath: 'polygon(0 100%, 100% 60%, 100% 100%, 0 100%)' }}
       ></div>
       
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="max-w-3xl mx-auto text-center mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="text-gradient">Let's Connect</span>
           </h2>
@@ -50,20 +51,20 @@ const Contact: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <motion.div 
-            className="space-y-8"
+            className="space-y-6 md:space-y-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold flex items-center">
+            <h3 className="text-xl md:text-2xl font-bold flex items-center">
               <MessageSquare className="mr-3 text-neon-gold" size={24} />
               Get in Touch
             </h3>
             
-            <p className="text-lg">
+            <p className="text-base md:text-lg">
               Whether you're looking for a 3D visualization, need help with automation, or want to discuss a web project, I'm here to bring your ideas to life.
             </p>
             
@@ -82,7 +83,7 @@ const Contact: React.FC = () => {
           <motion.form 
             name="contact-form" // Name attribute is required by Netlify
             onSubmit={handleSubmit}
-            className="space-y-6 glass-card p-6 rounded-xl"
+            className="space-y-5 glass-card p-5 sm:p-6 rounded-xl w-full"
             data-netlify="true" // This tells Netlify to handle the form
             data-netlify-honeypot="bot-field" // Optional anti-bot field
             initial={{ opacity: 0, y: 20 }}
