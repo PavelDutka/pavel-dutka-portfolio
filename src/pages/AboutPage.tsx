@@ -9,7 +9,7 @@ const skills = [
   {
     category: "3D Design",
     icon: <PaintBucket className="text-neon-purple" size={24} />,
-    items: ["Blender", "3DS Max", "Substance Painter", "Archviz", "3D Modeling", "Texturing"]
+    items: ["Blender", "Product renders", "Archviz", "3D Modeling", "Texturing"]
   },
   {
     category: "Development",
@@ -19,7 +19,7 @@ const skills = [
   {
     category: "Automation",
     icon: <CircuitBoard className="text-neon-purple" size={24} />,
-    items: ["Puppet", "Ansible", "CI/CD", "Shell Scripting", "Infrastructure as Code", "Monitoring"]
+    items: ["Puppet", "Ansible", "CI/CD", "Shell Scripting", "Git", "Infra"]
   },
   {
     category: "Database & Cloud",

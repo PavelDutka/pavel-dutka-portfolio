@@ -32,7 +32,7 @@ The project involved:
     ],
     tags: ["3D Visualization", "Architecture", "Blender"],
     tools: ["Blender", "Photoshop", "botaniq"],
-    client: "Showcase project",
+    client: "Personal Project",
     year: "2022",
     category: "3D",
     liveLink: "/404",
@@ -53,12 +53,12 @@ Key aspects of this project:
     image: "./images/portfolio/tinyHouse.webp",
     gallery: [
       "/images/portfolio/tinyHouse.webp",
-      "/images/portfolio/front.png",
-      "/images/portfolio/tinyHouse.webp"
+      "/images/portfolio/front.webp",
+      "/images/portfolio/top.webp"
     ],
     tags: ["3D Visualization", "Environment", "Lighting"],
     tools: ["Blender", "Photoshop", "botaniq"],
-    client: "Eco Living Concepts",
+    client: "Personal Project",
     year: "2023",
     category: "3d",
     liveLink: "/404",
@@ -67,8 +67,8 @@ Key aspects of this project:
   {
     id: 3,
     title: "Financial Advisor Website",
-    description: "Clean, professional website design for a financial advisory firm with interactive UI elements. Built with React and includes custom charts, calculators, and client portal.",
-    fullDescription: `This comprehensive website for a financial advisory firm was designed to provide both information and interactive tools for potential and existing clients. The site features a clean, professional aesthetic that inspires trust while offering powerful functionality.
+    description: "Clean, professional website design for a financial advisor. Built with HTML and CSS.",
+    fullDescription: `This comprehensive website for a financial advisor was designed to provide both information and interactive tools for potential and existing clients. The site features a clean, professional aesthetic that inspires trust while offering powerful functionality.
 
 Key features developed:
 - Responsive, mobile-first design
@@ -81,15 +81,15 @@ Key features developed:
     gallery: [
       "/images/portfolio/patrman_mockup.webp",
       "/images/portfolio/Screenshot 2025-03-07 231031.jpg",
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=2000&q=80"
+      "/images/portfolio/patrman_laptop.png"
     ],
     tags: ["Web Design", "UI/UX", "React"],
     tools: ["HTML", "CSS", "javascript", "php"],
-    client: "Financial Advisors Inc.",
-    year: "2023",
+    client: "Lukáš Patrman",
+    year: "2024",
     category: "web",
-    liveLink: "https://example.com/finance-website",
-    repoLink: "https://github.com/yourusername/finance-website"
+    liveLink: "https://patrman.cz/",
+    repoLink: "https://github.com/PavelDutka/LukasPatrman"
   },
   {
     id: 4,
@@ -106,23 +106,23 @@ Development highlights:
 - Project filtering and categorization`,
     image: "./images/portfolio/portfolio_mockup.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=2000&q=80",
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=2000&q=80",
-      "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=2000&q=80"
+      "/images/portfolio/portfolio_mockup.webp",
+      "/images/portfolio/portfolio_mockup_mobile.jpg",
+      "/images/portfolio/portfolio_mockup_laptop.jpg"
     ],
     tags: ["Web Design", "UI/UX", "React"],
     tools: ["React", "TypeScript", "Framer Motion", "Tailwind CSS"],
     client: "Personal Project",
-    year: "2023",
+    year: "2025",
     category: "web",
-    liveLink: "https://example.com/portfolio",
-    repoLink: "https://github.com/yourusername/portfolio"
+    liveLink: "https://paveldutka.com",
+    repoLink: "https://github.com/PavelDutka/pavel-dutka-portfolio"
   },
   {
     id: 5,
     title: "Puppet Automation Setup",
-    description: "Complex infrastructure automation implementation with visual workflow diagrams and monitoring. Designed for a medium-sized tech company to streamline deployments.",
-    fullDescription: `This project involved designing and implementing a comprehensive automation solution using Puppet for a medium-sized technology company. The goal was to standardize server configurations, streamline deployments, and improve overall infrastructure reliability.
+    description: "In this project, I implemented a comprehensive Puppet-based automation system for managing and configuring Windows workstations in a company environment. The goal was to replace manual processes with a declarative approach, ensuring consistency and efficiency across all devices.",
+    fullDescription: `As part of my work in automating IT management processes, I developed a robust Puppet-based solution for the configuration and maintenance of Windows workstations in an enterprise setting. The project was aimed at replacing manual, time-consuming procedures with a fully automated, declarative system to ensure uniformity, efficiency, and scalability. This solution not only enhanced the overall IT workflow but also contributed to increased operational reliability and reduced human error.
 
 The implementation included:
 - Server configuration management with Puppet
@@ -133,17 +133,14 @@ The implementation included:
 - Documentation and knowledge transfer`,
     image: "./images/portfolio/puppet_automation.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=80",
-      "https://images.unsplash.com/photo-1558494950-b8e691e567e7?auto=format&fit=crop&w=2000&q=80",
-      "https://images.unsplash.com/photo-1562929600-cdd9a19ffd0f?auto=format&fit=crop&w=2000&q=80"
-    ],
+      ],
     tags: ["Automation", "DevOps", "Infrastructure"],
-    tools: ["Puppet", "Docker", "Grafana", "Jenkins"],
-    client: "Tech Solutions Corp",
-    year: "2023",
+    tools: ["Puppet", "Ansible", "CI/CD", "Git"],
+    client: "polygoniq",
+    year: "2025",
     category: "automation",
-    liveLink: "https://example.com/automation-case-study",
-    repoLink: "https://github.com/yourusername/puppet-automation"
+    liveLink: "https://github.com/PavelDutka/puppet-installation",
+    repoLink: "https://github.com/PavelDutka/puppet-installation"
   },
   {
     id: 6,
@@ -165,7 +162,7 @@ The project deliverables included:
     ],
     tags: ["Blender", "3D modeling", "Texturing"],
     tools: ["Blender", "Substance Painter", "Unity"],
-    client: "Traffiq Addon Team",
+    client: "polygoniq",
     year: "2022",
     category: "3d",
     liveLink: "https://blendermarket.com/products/car-library-traffiq-vehicles-for-blender?search_id=37615550",
