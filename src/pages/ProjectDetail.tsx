@@ -170,34 +170,33 @@ The project deliverables included:
   },
   {
     id: 7,
-    title: "E-commerce Platform",
-    description: "A fully responsive e-commerce platform with integrated payment processing and inventory management.",
-    fullDescription: `This e-commerce platform was developed to provide small businesses with an affordable yet powerful online sales solution. The project focused on creating an intuitive user experience while implementing robust backend systems for inventory and order management.
+    title: "Luxury pen",
+    description: "A meticulously crafted luxury pen designed with premium materials, featuring a high-end product visualization.",
+    fullDescription: `This project involved 3D modeling and rendering a sophisticated pen for Signity, emphasizing elegance and craftsmanship. The design incorporates opulent materials such as gold and stainless steel, tailored for an exclusive audience, including the Pope.
 
-Key features implemented:
-- Responsive product catalog with advanced filtering options
-- Secure payment gateway integration
-- Real-time inventory tracking system
-- Customer account management with order history
-- Admin dashboard for product and order management
-- Automated email notifications for order status updates`,
-    image: "./images/portfolio/ecommerce_mockup.webp",
-    gallery: [
-      "/images/portfolio/ecommerce_mockup.webp",
+Key highlights of the project:
+- High-fidelity 3D model with intricate detailing
+- Ultra-realistic material rendering for a premium look
+- Optimized lighting setup to enhance visual appeal
+- Multiple high-resolution product shots from various angles
+- Post-production enhancements for a polished presentation`,
+    "image": "./images/portfolio/luxury_pen_mockup.webp",
+    "gallery": [
+      "/images/portfolio/WF_papez_C.webp",
       "/images/portfolio/WF_papez_A.webp",
       "/images/portfolio/WF_papez_B.webp"
     ],
-    tags: ["Web Development", "E-commerce", "UI/UX"],
-    tools: ["React", "Node.js", "MongoDB", "Stripe API", "AWS"],
-    client: "Local Retail Collective",
-    year: "2024",
-    category: "web",
-    liveLink: "https://example.com/ecommerce",
-    repoLink: "https://github.com/example/ecommerce"
-  },
+    "tags": ["3D Modeling", "Product Rendering", "Luxury Design"],
+    "tools": ["Blender", "Substance Painter", "Photoshop", "Cycles"],
+    "client": "Signity",
+    "year": "2024",
+    "category": "3D Visualization",
+    "liveLink": "https://www.wood-factory.cz/",
+    "repoLink": "https://www.wood-factory.cz/"
+},
   {
     id: 8,
-    title: "Educational Institution Website",
+    title: "EE challenge",
     description: "Modern, accessible website redesign for an educational institution with student portal integration.",
     fullDescription: `This comprehensive website redesign for an educational institution focused on improving accessibility, user experience, and information architecture. The project involved close collaboration with faculty, students, and administrators to ensure all stakeholder needs were addressed.
 
@@ -211,41 +210,37 @@ The website implementation included:
 - Multi-language support for international students`,
     image: "./images/portfolio/WF_papez_A_wide.webp",
     gallery: [
-      "/images/portfolio/WF_papez_A_wide.webp",
-      "/images/portfolio/WF_papez_C.webp",
-      "/images/portfolio/WF_papez_A (Small).jpeg"
+      "/images/portfolio/EE_anim.jpg"
     ],
     tags: ["Web Design", "Education", "Accessibility"],
     tools: ["WordPress", "PHP", "JavaScript", "MySQL", "Figma"],
-    client: "Metropolitan University",
+    client: "Pwnisher",
     year: "2023",
     category: "web",
-    liveLink: "https://example.com/university",
-    repoLink: "https://github.com/example/university-website"
+    liveLink: "https://drive.google.com/file/d/1-AIevFM1wb7PDYbdw6g2ciuS1NfsAEjl/view?usp=sharing",
+    repoLink: "https://drive.google.com/file/d/1-AIevFM1wb7PDYbdw6g2ciuS1NfsAEjl/view?usp=sharing"
   },
   {
     id: 9,
-    title: "Industrial Complex Visualization",
-    description: "Detailed 3D visualization of an industrial manufacturing complex for planning and presentation purposes.",
-    fullDescription: `This project involved creating a comprehensive 3D visualization of a planned industrial manufacturing complex. The visualization was used for both internal planning and stakeholder presentations to communicate the facility layout, workflow, and spatial relationships.
+    title: "Haas + Sohn visualization",
+    description: "High-quality 3D visualizations showcasing Haas+Sohn fireplaces in warm, inviting interior spaces.",
+    fullDescription: `This project involved creating two photorealistic interior visualizations featuring Haas+Sohn fireplaces. The focus was on capturing a cozy and stylish atmosphere that aligns with the brand’s catalog aesthetic. Each scene was carefully designed to highlight the elegance and functionality of the fireplaces in real-world settings.
 
 The visualization project included:
-- Highly detailed exterior and interior modeling of the facility
-- Accurate scale representations of manufacturing equipment
-- Animated sequences showing production workflows
-- Multiple lighting scenarios (day/night/emergency)
-- Integration of actual engineering specifications
-- Optimized models for real-time exploration in VR
-- Creation of flythrough videos for presentations`,
+- Detailed 3D modeling of interior spaces
+- Realistic lighting and texturing for a warm ambiance
+- Composition tailored for print-ready catalog visuals
+- Multiple camera angles to emphasize product integration
+- Post-production enhancements for a refined presentation`,
     image: "./images/portfolio/Bregenz.webp",
     gallery: [
       "/images/portfolio/Bregenz.webp",
-      "/images/portfolio/EE_anim.jpg"
+      "/images/portfolio/Gastein.jpg"
     ],
     tags: ["3D Visualization", "Industrial", "VR"],
-    tools: ["Blender", "Unreal Engine", "Substance Painter", "After Effects"],
-    client: "Global Manufacturing Corp",
-    year: "2023",
+    tools: ["Blender", "Substance Painter", "photoshop", "Cycles"],
+    client: "Haas + Sohn",
+    year: "2022",
     category: "3D",
     liveLink: "/404",
     repoLink: "/404"
