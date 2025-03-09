@@ -167,6 +167,88 @@ The project deliverables included:
     category: "3d",
     liveLink: "https://blendermarket.com/products/car-library-traffiq-vehicles-for-blender?search_id=37615550",
     repoLink: "https://blendermarket.com/products/car-library-traffiq-vehicles-for-blender?search_id=37615550"
+  },
+  {
+    id: 7,
+    title: "E-commerce Platform",
+    description: "A fully responsive e-commerce platform with integrated payment processing and inventory management.",
+    fullDescription: `This e-commerce platform was developed to provide small businesses with an affordable yet powerful online sales solution. The project focused on creating an intuitive user experience while implementing robust backend systems for inventory and order management.
+
+Key features implemented:
+- Responsive product catalog with advanced filtering options
+- Secure payment gateway integration
+- Real-time inventory tracking system
+- Customer account management with order history
+- Admin dashboard for product and order management
+- Automated email notifications for order status updates`,
+    image: "./images/portfolio/ecommerce_mockup.webp",
+    gallery: [
+      "/images/portfolio/ecommerce_mockup.webp",
+      "/images/portfolio/WF_papez_A.webp",
+      "/images/portfolio/WF_papez_B.webp"
+    ],
+    tags: ["Web Development", "E-commerce", "UI/UX"],
+    tools: ["React", "Node.js", "MongoDB", "Stripe API", "AWS"],
+    client: "Local Retail Collective",
+    year: "2024",
+    category: "web",
+    liveLink: "https://example.com/ecommerce",
+    repoLink: "https://github.com/example/ecommerce"
+  },
+  {
+    id: 8,
+    title: "Educational Institution Website",
+    description: "Modern, accessible website redesign for an educational institution with student portal integration.",
+    fullDescription: `This comprehensive website redesign for an educational institution focused on improving accessibility, user experience, and information architecture. The project involved close collaboration with faculty, students, and administrators to ensure all stakeholder needs were addressed.
+
+The website implementation included:
+- Accessible design that meets WCAG 2.1 AA standards
+- Integration with existing student information systems
+- Interactive campus map and virtual tour features
+- Event calendar with filtering and registration capabilities
+- Responsive design optimized for all devices
+- Performance optimizations for fast loading times
+- Multi-language support for international students`,
+    image: "./images/portfolio/WF_papez_A_wide.webp",
+    gallery: [
+      "/images/portfolio/WF_papez_A_wide.webp",
+      "/images/portfolio/WF_papez_C.webp",
+      "/images/portfolio/WF_papez_A (Small).jpeg"
+    ],
+    tags: ["Web Design", "Education", "Accessibility"],
+    tools: ["WordPress", "PHP", "JavaScript", "MySQL", "Figma"],
+    client: "Metropolitan University",
+    year: "2023",
+    category: "web",
+    liveLink: "https://example.com/university",
+    repoLink: "https://github.com/example/university-website"
+  },
+  {
+    id: 9,
+    title: "Industrial Complex Visualization",
+    description: "Detailed 3D visualization of an industrial manufacturing complex for planning and presentation purposes.",
+    fullDescription: `This project involved creating a comprehensive 3D visualization of a planned industrial manufacturing complex. The visualization was used for both internal planning and stakeholder presentations to communicate the facility layout, workflow, and spatial relationships.
+
+The visualization project included:
+- Highly detailed exterior and interior modeling of the facility
+- Accurate scale representations of manufacturing equipment
+- Animated sequences showing production workflows
+- Multiple lighting scenarios (day/night/emergency)
+- Integration of actual engineering specifications
+- Optimized models for real-time exploration in VR
+- Creation of flythrough videos for presentations`,
+    image: "./images/portfolio/Bregenz.webp",
+    gallery: [
+      "/images/portfolio/Bregenz.webp",
+      "/images/portfolio/EE_anim.jpg"
+    ],
+    tags: ["3D Visualization", "Industrial", "VR"],
+    tools: ["Blender", "Unreal Engine", "Substance Painter", "After Effects"],
+    client: "Global Manufacturing Corp",
+    year: "2023",
+    category: "3D",
+    liveLink: "/404",
+    repoLink: "/404"
   }
 ];
 
