@@ -175,7 +175,7 @@ The project deliverables included:
   },
   {
     id: 7,
-    title: "E-commerce Platform",
+    title: "Luxury pen",
     description: "A fully responsive e-commerce platform with integrated payment processing and inventory management.",
     fullDescription: `This e-commerce platform was developed to provide small businesses with an affordable yet powerful online sales solution. The project focused on creating an intuitive user experience while implementing robust backend systems for inventory and order management.
 
@@ -216,9 +216,9 @@ The website implementation included:
 - Multi-language support for international students`,
     image: "./images/portfolio/WF_papez_A_wide.webp",
     gallery: [
-      "/images/portfolio/WF_papez_A_wide.webp",
+      "/images/portfolio/WF_papez_A.webp",
       "/images/portfolio/WF_papez_C.webp",
-      "/images/portfolio/WF_papez_A (Small).jpeg"
+      "/images/portfolio/WF_papez_B.webp"
     ],
     tags: ["Web Design", "Education", "Accessibility"],
     tools: ["WordPress", "PHP", "JavaScript", "MySQL", "Figma"],
