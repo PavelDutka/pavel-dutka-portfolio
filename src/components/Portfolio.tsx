@@ -24,27 +24,6 @@ const projects = [
     description: "Complex infrastructure automation implementation with visual workflow diagrams and monitoring.",
     image: "./images/portfolio/puppet_automation.webp",
     tags: ["Automation", "DevOps", "Infrastructure"],
-  },
-  {
-    id: 7,
-    title: "E-commerce Platform",
-    description: "A fully responsive e-commerce platform with integrated payment processing and inventory management.",
-    image: "./images/portfolio/ecommerce_mockup.webp",
-    tags: ["Web Development", "E-commerce", "UI/UX"],
-  },
-  {
-    id: 8,
-    title: "Educational Institution Website",
-    description: "Modern, accessible website redesign for an educational institution with student portal integration.",
-    image: "./images/portfolio/WF_papez_A_wide.webp",
-    tags: ["Web Design", "Education", "Accessibility"],
-  },
-  {
-    id: 9,
-    title: "Industrial Complex Visualization",
-    description: "Detailed 3D visualization of an industrial manufacturing complex for planning and presentation purposes.",
-    image: "./images/portfolio/Bregenz.webp",
-    tags: ["3D Visualization", "Industrial", "VR"],
   }
 ];
 
