@@ -91,12 +91,14 @@ const Contact: React.FC = () => {
             >
               {/* Hidden form name field */}
               <input type="hidden" name="form-name" value="contact-form" />
+              
+              {/* Honeypot field */}
               <p className="hidden">
                 <label>
-                  Don’t fill this out if you’re human: <input name="bot-field" />
+                  Don't fill this out if you're human: <input name="bot-field" />
                 </label>
               </p>
-
+              
               <div className="space-y-5">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
