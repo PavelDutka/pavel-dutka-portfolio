@@ -79,73 +79,72 @@ const Contact: React.FC = () => {
             
           </motion.div>
           
-          <motion.form 
-            name="contact-form"
-            method="POST"
-            onSubmit={handleSubmit}
+          <motion.div 
             className="space-y-5 glass-card p-5 sm:p-6 rounded-xl w-full"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            {/* Hidden form name field */}
-            <input type="hidden" name="form-name" value="contact-form" />
-            
-            {/* Honeypot field */}
-            <div className="hidden">
-              <input name="bot-field" />
-            </div>
-            
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formState.name}
-                onChange={handleChange}
-                className="w-full p-3 rounded-lg bg-secondary/50 border border-border focus:border-neon-gold focus:ring-1 focus:ring-neon-gold outline-none transition-all duration-300"
-                required
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formState.email}
-                onChange={handleChange}
-                className="w-full p-3 rounded-lg bg-secondary/50 border border-border focus:border-neon-gold focus:ring-1 focus:ring-neon-gold outline-none transition-all duration-300"
-                required
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formState.message}
-                onChange={handleChange}
-                rows={5}
-                className="w-full p-3 rounded-lg bg-secondary/50 border border-border focus:border-neon-gold focus:ring-1 focus:ring-neon-gold outline-none transition-all duration-300 resize-none"
-                required
-              ></textarea>
-            </div>
-            
-            <button
-              type="submit"
-              className="w-full py-3 rounded-lg bg-neon-gold text-black font-medium button-glow flex items-center justify-center"
+            <form 
+              name="contact-form"
+              method="POST"
+              onSubmit={handleSubmit}
+              data-netlify="true"
             >
-              Send Message
-              <Send size={18} className="ml-2" />
-            </button>
-          </motion.form>
+              {/* Hidden form name field */}
+              <input type="hidden" name="form-name" value="contact-form" />
+              
+              <div className="space-y-5">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formState.name}
+                    onChange={handleChange}
+                    className="w-full p-3 rounded-lg bg-secondary/50 border border-border focus:border-neon-gold focus:ring-1 focus:ring-neon-gold outline-none transition-all duration-300"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formState.email}
+                    onChange={handleChange}
+                    className="w-full p-3 rounded-lg bg-secondary/50 border border-border focus:border-neon-gold focus:ring-1 focus:ring-neon-gold outline-none transition-all duration-300"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formState.message}
+                    onChange={handleChange}
+                    rows={5}
+                    className="w-full p-3 rounded-lg bg-secondary/50 border border-border focus:border-neon-gold focus:ring-1 focus:ring-neon-gold outline-none transition-all duration-300 resize-none"
+                    required
+                  ></textarea>
+                </div>
+                
+                <button
+                  type="submit"
+                  className="w-full py-3 rounded-lg bg-neon-gold text-black font-medium button-glow flex items-center justify-center"
+                >
+                  Send Message
+                  <Send size={18} className="ml-2" />
+                </button>
+              </div>
+            </form>
+          </motion.div>
         </div>
       </div>
     </section>
