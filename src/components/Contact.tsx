@@ -20,16 +20,13 @@ const Contact: React.FC = () => {
     e.preventDefault();
     console.log('Form submitted:', formState);
 
-    // You don't need to send anything here, Netlify will automatically handle form submissions
-    
     // Reset form after submission
     setFormState({
       name: '',
       email: '',
       message: ''
     });
-    
-    // Optionally, show success message or alert
+
     alert('Thank you for your message! I will get back to you soon.');
   };
 
@@ -39,7 +36,7 @@ const Contact: React.FC = () => {
         className="absolute bottom-0 right-0 w-full h-64 bg-gradient-to-t from-neon-amber/5 to-transparent pointer-events-none"
         style={{ clipPath: 'polygon(0 100%, 100% 60%, 100% 100%, 0 100%)' }}
       ></div>
-      
+
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -49,7 +46,7 @@ const Contact: React.FC = () => {
             Want to collaborate? Have a project in mind? I'd love to hear from you.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <motion.div 
             className="space-y-6 md:space-y-8"
@@ -62,11 +59,11 @@ const Contact: React.FC = () => {
               <MessageSquare className="mr-3 text-neon-gold" size={24} />
               Get in Touch
             </h3>
-            
+
             <p className="text-base md:text-lg">
               Whether you're looking for a 3D visualization, need help with automation, or want to discuss a web project, I'm here to bring your ideas to life.
             </p>
-            
+
             <div className="flex items-center space-x-3 text-foreground/80">
               <Mail className="text-neon-amber" size={20} />
               <a 
@@ -76,9 +73,8 @@ const Contact: React.FC = () => {
                 pavel@paveldutka.com
               </a>
             </div>
-            
           </motion.div>
-          
+
           <motion.div 
             className="space-y-5 glass-card p-5 sm:p-6 rounded-xl w-full"
             initial={{ opacity: 0, y: 20 }}
@@ -89,12 +85,18 @@ const Contact: React.FC = () => {
             <form 
               name="contact-form"
               method="POST"
-              onSubmit={handleSubmit}
               data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
             >
               {/* Hidden form name field */}
               <input type="hidden" name="form-name" value="contact-form" />
-              
+              <p className="hidden">
+                <label>
+                  Don’t fill this out if you’re human: <input name="bot-field" />
+                </label>
+              </p>
+
               <div className="space-y-5">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
@@ -108,7 +110,7 @@ const Contact: React.FC = () => {
                     required
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
                   <input
@@ -121,7 +123,7 @@ const Contact: React.FC = () => {
                     required
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
                   <textarea
@@ -134,7 +136,7 @@ const Contact: React.FC = () => {
                     required
                   ></textarea>
                 </div>
-                
+
                 <button
                   type="submit"
                   className="w-full py-3 rounded-lg bg-neon-gold text-black font-medium button-glow flex items-center justify-center"
