@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MessageSquare, Send } from 'lucide-react';
@@ -81,16 +80,25 @@ const Contact: React.FC = () => {
           </motion.div>
           
           <motion.form 
-            name="contact-form" // Name attribute is required by Netlify
+            name="contact-form"
+            method="POST"
             onSubmit={handleSubmit}
             className="space-y-5 glass-card p-5 sm:p-6 rounded-xl w-full"
-            data-netlify="true" // This tells Netlify to handle the form
-            data-netlify-honeypot="bot-field" // Optional anti-bot field
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
+            {/* Hidden form name field */}
+            <input type="hidden" name="form-name" value="contact-form" />
+            
+            {/* Honeypot field */}
+            <div className="hidden">
+              <input name="bot-field" />
+            </div>
+            
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
               <input
